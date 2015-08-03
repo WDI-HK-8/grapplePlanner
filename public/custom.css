@@ -1,0 +1,125 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+div {
+  display: block;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/homepage-bg.jpg) no-repeat center;
+  background-size: cover;
+  font-family: 'lato-light';
+}
+
+.front-welcome {
+  display: block;
+  float: left;
+  width: 520px;
+
+}
+
+.front-card {
+  left: 50%;
+  height: 410px;
+  position: absolute;
+  margin: -154px 0 0 -418px;
+  top: 50%;
+  width: 838px;
+}
+
+.front-welcome-text {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  left: 0;
+  line-height: 22px;
+  padding: 20px;
+  position: absolute;
+  text-align: left;
+  text-shadow: #000 0 1px 2px;
+  width: 470px;
+  margin-top: -5%
+  }
+
+  .front-signin {
+  background: white;
+  border: 1px solid #899CA4;
+  box-shadow: none;
+  border-radius: 4px;
+  margin-bottom: 11px;
+  width: 300px;
+  margin-left: 100%;
+}
+
+.front-signin .username .text-input {
+  width: 266px;
+  }
+
+  .front-card .text-input {
+  height: 20px;
+}
+
+input {
+  display: inline-block;
+  width: 180px;
+  padding: 15px;
+  margin: 5px;
+  outline: 0;
+  background-color: #fff;
+  border: 1px solid #e1e8ed;
+  border-radius: 3px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.front-signin .signin {
+  margin: 12px 12px 6px;
+}
+
+
+.front-signup {
+  background: #fff;
+  border: 1px solid #899CA4;
+  border-radius: 4px;
+  height: 206px;
+  width: 300px;
+  margin-left: 100%;
+  }
+
+  .front-signup .text-input {
+  width: 266px;
+  margin-left: 5%;
+}
+
+.front-signup .btn {
+  box-shadow: 0 1px 0 #fff;
+  height: 30px;
+  margin: 1px 12px 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  float: right;
+}
+
+.btn {
+  background-color: #FFC107;
+  background-repeat: no-repeat;
+  border: 1px solid #e1e8ed;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 11px;
+  padding: 8px 16px;
+  position: relative;
+  }
+
+  h5 {
+    margin-left: 15px;
+  }
