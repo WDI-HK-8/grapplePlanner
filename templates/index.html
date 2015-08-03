@@ -4,10 +4,10 @@
 <head>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="js/application.js"></script>
+  <script src="public/application.js"></script>
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato|Roboto|Lobster|Dosis">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/custom.css" rel="stylesheet">
+  <link href="public/custom.css" rel="stylesheet">
   <title></title>
 </head>
 <body>
@@ -22,7 +22,7 @@
       <div class="front-signin">
         <form class="signin" method="post">
           <div class="username field">
-            <input type="text" id="signin-email" class="text-input email-input" autocomplete="on" placeholder="Email">
+            <input type="text" id="signin-username" class="text-input" autocomplete="on" placeholder="Username">
           </div>
           <table class="password-signin">
             <tbody>
@@ -33,7 +33,7 @@
                   </div>
                 </td>
                 <td class="">
-                  <button type="submit" class="submit btn">
+                  <button type="submit" class="submit btn" id="submit-signin">
                     Log in
                   </button>
                 </td>
@@ -49,15 +49,15 @@
         <form class="signup" id="frontpage-signup-form" method="post">
 
           <div class="field">
-            <input type="text" class="text-input sign-up-name" autocomplete="off" maxlength="20" placeholder="Full name">
+            <input type="text" class="text-input" id="sign-up-name" autocomplete="off" maxlength="20" placeholder="Choose a username">
           </div>
           <div class="field">
-            <input type="text" class="text-input sign-up-email" autocomplete="off" placeholder="Email">
+            <input type="text" class="text-input" id="sign-up-email" autocomplete="off" placeholder="Email">
           </div>
           <div class="field">
-            <input type="password" class="text-input sign-up-password" placeholder="Password">
+            <input type="password" class="text-input" id="sign-up-password" placeholder="Password">
           </div>
-          <button type="submit" class="btn signup-btn">
+          <button type="submit" class="btn signup-btn" id="submit-signup">
             Sign up now
           </button>
         </form>

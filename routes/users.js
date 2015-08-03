@@ -1,18 +1,18 @@
 var Bcrypt = require('bcrypt');
 var Joi = require('joi');
-var Auth = require('./auth');
 
 //defining the plugin
 exports.register = function(server, options, next){
-  //Define routs
   server.route([
-    // I am RECEIVING a post request
     {
+      // Create a new user
       method: 'POST',
       path: '/users',
       config: {
-        handler: function(request, reply){
+        handler: function(request, reply) {
           var db = request.server.plugins['hapi-mongodb'].db;
+
+          // Get user input parameters (name, email, password)
           var user = request.payload.user;
           
           var uniqUserQuery = {
@@ -48,39 +48,16 @@ exports.register = function(server, options, next){
           payload: {
             user: {
               email: Joi.string().email().max(50).required(),
-              password: Joi.string().min(5).max(20).required(),
+              password: Joi.string().min(3).max(20).required(),
               username:  Joi.string().min(3).max(20).required(),
-              name:  Joi.string().min(3).max(20).required()
             }
           }
         }
       }
-    },
-    {
-      // show all users
-      method: 'GET',
-      path: '/users',
-      handler: function(request, reply){
-        // First check to see if person is authenticated
-        Auth.authenticated(request, function (session){
-          if (!session.authenticated) {
-            return reply(session);
-          }
-          var db = request.server.plugins['hapi-mongodb'].db;
-          db.collection('users').find().toArray(function(err, users){
-            if(err) {
-              return reply ("Internal MongoDB error", err)
-            }
-          
-          reply (users);
-          
-          });
-        })
-      }
     }
   ]);
   next();
-};
+}
 
 //Defining the descriptions of the plugin
 exports.register.attributes = {

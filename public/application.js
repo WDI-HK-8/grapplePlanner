@@ -1,11 +1,12 @@
 $(document).ready(function(){
-  $('#signup-btn').click(function(){
-    //declare input variables
+  
+  //sign up
+  $('#submit-signup').click(function(){
+
     var name = $('#sign-up-name');
     var email = $('#sign-up-email');
     var password = $('#sign-up-password');
 
-    //prevent form from redirecting
     event.preventDefault();
 
     //Sign up
@@ -14,7 +15,7 @@ $(document).ready(function(){
       url: '/users',
       data: {
         user: {
-          name: name.val(),
+          username: name.val(),
           email: email.val(),
           password: password.val(),
         }
@@ -25,6 +26,35 @@ $(document).ready(function(){
        },
       error: function(xhr, status, error){
         $('#signup-form-message').text(xhr.responseText);
+      }
+    });
+  });
+
+
+  //sign in
+  $('#submit-signin').click(function(){
+      event.preventDefault();
+
+    console.log("working")
+
+    var si_password = $('#signin-password');
+    var si_username = $('#signin-username');
+    
+    $.ajax({
+      type: 'POST',
+      url: '/sessions',
+      data: {
+        user: {
+          username: si_username.val(),
+          password: si_password.val()
+        }
+      },
+      dataType: 'JSON',
+      xhrFields: {
+        withCredentials: true
+      },
+      success: function(response){
+        console.log("create session / logged in", response);
       }
     });
   });

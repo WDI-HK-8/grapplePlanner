@@ -5,7 +5,7 @@ var Path = require('path');
 // Instantiate
 var server = new Hapi.Server();
 
-// configure server connections
+// configure szerver connections
 server.connection({
   host: '0.0.0.0', 
   port: process.env.PORT || 3000,
@@ -26,7 +26,18 @@ server.views({
 
 // Any other dependencies 
 var plugins = [
+  { register: require('./routes/sessions.js') }, 
+  { register: require('./routes/static-pages.js') },
   { register: require('./routes/users.js') },
+  { register: require('yar'),
+    options:{
+      cookieOptions: {
+        password: process.env.COOKIE_PASSWORD || 'asasdasd',
+        isSecure: false// we are not going to use https, yet, for development
+      }
+    }
+  },
+
   //require mongoDB
   { register: require('hapi-mongodb'),
     options: {
