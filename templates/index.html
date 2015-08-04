@@ -1,1 +1,68 @@
-index.html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="public/application.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato|Roboto|Lobster|Dosis">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="public/custom.css" rel="stylesheet">
+  <title></title>
+</head>
+<body>
+  <div class="front-card">
+    <!-- Blurb -->
+    <div class="front-welcome">
+      <div class="front-welcome-text col-lg-2">
+        <h2>Welcome to Grapple Planner.</h2>
+        <p>Brazilian Jiu Jistu is difficult to learn. With literally thousands of positions and techniques, it can seem overwhelming. Grapple Planner will advance the speed of your learning by helping you to acurately organise your arsenal of techniques. Try it today and take your game to the next level! </p>
+      </div> 
+      <!-- sign in box -->
+      <div class="front-signin">
+        <form class="signin" method="post">
+          <div class="username field">
+            <input type="text" id="signin-username" class="text-input" autocomplete="on" placeholder="Username">
+          </div>
+          <table class="password-signin">
+            <tbody>
+              <tr>
+                <td class="">
+                  <div class="password">
+                    <input type="password" id="signin-password" class="text-input" placeholder="Password">
+                  </div>
+                </td>
+                <td class="">
+                  <button type="submit" class="submit btn" id="submit-signin">
+                    Log in
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+
+      <!-- sign up box -->
+      <div class="front-signup js-front-signup">
+        <h5><strong>New to Grapple Planner?</strong> Sign up</h5>
+        <form class="signup" id="frontpage-signup-form" method="post">
+
+          <div class="field">
+            <input type="text" class="text-input" id="sign-up-name" autocomplete="off" maxlength="20" placeholder="Choose a username">
+          </div>
+          <div class="field">
+            <input type="text" class="text-input" id="sign-up-email" autocomplete="off" placeholder="Email">
+          </div>
+          <div class="field">
+            <input type="password" class="text-input" id="sign-up-password" placeholder="Password">
+          </div>
+          <button type="submit" class="btn signup-btn" id="submit-signup">
+            Sign up now
+          </button>
+        </form>
+      </div>
+    </div>
+
+</body>
+</html>
