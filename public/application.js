@@ -55,7 +55,17 @@ $(document).ready(function(){
       },
       success: function(response){
         console.log("create session / logged in", response);
+        if(response.authorized === true){
+          console.log('working')
+          window.location.replace('./home');
+        }
       }
+    });
+
+    //sign out
+  $('.sign-out-btn').click(function(){
+    event.preventDefault();
+    console.log("hello)");
     });
   });
 });

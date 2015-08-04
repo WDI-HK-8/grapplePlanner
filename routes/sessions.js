@@ -39,7 +39,7 @@ exports.register = function(server, options, next){
           db.collection('sessions').insert(session, function(err, writeResult){
   
           //4. Set the same session_id in the CLIENT's cookie.
-          request.session.set('hapi_twitter_session', session);
+          request.session.set('grapple_planner_session', session);
 
           reply({ authorized: true}); 
         });
@@ -55,6 +55,24 @@ exports.register = function(server, options, next){
             reply(result);
         };
         Auth.authenticated(request, callback);
+      }
+    },
+    {
+      method: 'DELETE',
+      path: '/sessions',
+      handler: function(request, reply) {
+        var session = request.session.get('grapple_planner_session');
+        var db = request.server.plugins['hapi-mongodb'].db;
+
+        if (!session) { 
+          return reply({ "message": "Already logged out" });
+        }
+
+        db.collection('sessions').remove({ "session_id": session.session_id }, function(err, writeResult) {
+          if (err) { return reply('Internal MongoDB error', err); }
+
+          reply(writeResult);
+        });
       }
     }
   ]);
