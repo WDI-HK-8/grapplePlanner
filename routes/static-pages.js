@@ -13,16 +13,27 @@ exports.register = function(server, options, next){
   ])
 
   server.route([
-      // I am RECEIVING a GET request
-      {
-        method: 'GET',
-        path: '/public/{path*}',
-        handler: {
-          directory: {
-            path: 'public'
-          }
+    // I am RECEIVING a GET request
+    {
+      method: 'GET',
+      path: '/home',
+      handler: function(request, reply){
+        reply.view('home')
+     }
+    }
+  ])
+
+  server.route([
+    // I am RECEIVING a GET request
+    {
+      method: 'GET',
+      path: '/public/{path*}',
+      handler: {
+        directory: {
+          path: 'public'
         }
-       }
+      }
+     }
   ])
   next();
 };

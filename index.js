@@ -26,6 +26,7 @@ server.views({
 
 // Any other dependencies 
 var plugins = [
+  { register: require('./routes/techniques.js') },
   { register: require('./routes/sessions.js') }, 
   { register: require('./routes/static-pages.js') },
   { register: require('./routes/users.js') },
