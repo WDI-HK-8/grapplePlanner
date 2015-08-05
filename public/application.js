@@ -61,11 +61,5 @@ $(document).ready(function(){
         }
       }
     });
-
-    //sign out
-  $('.sign-out-btn').click(function(){
-    event.preventDefault();
-    console.log("hello)");
-    });
   });
 });
