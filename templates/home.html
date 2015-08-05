@@ -11,222 +11,202 @@
   <title></title>
 </head>
 <body>
- 
-
   <div id="wrapper">
-
-      <!-- Navigation -->
-      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="index.html">Grapple Planner</a>
-        </div>
-        <!-- Top Menu Items -->
-        <ul class="nav navbar-right top-nav">
-          <li class="dropdown">
-            <a href="#" id="sign-out-btn"><i class="fa fa-fw fa-user dropdown"></i> Sign out</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Grapple Planner</a>
+      </div>
+      <!-- Top Menu Items -->
+      <ul class="nav navbar-right top-nav">
+        <li class="dropdown">
+          <a href="#" id="sign-out-btn"><i class="fa fa-fw fa-user dropdown"></i> Sign out</a>
+        </li>
+      </ul>
+      <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav side-nav">    
+          <li>
+            <a href="javascript:;" data-toggle="collapse" data-target="#top"><i class="fa fa-fw fa-arrows-v"></i> Top Position <i class="fa fa-fw fa-caret-down"></i></a>
+          <ul id="top" class="collapse">
+              <li>
+                <a href="#">Full Guard</a>
+              </li>
+               <li>
+                <a href="#">Half Guard</a>
+              </li>
+               <li>
+                <a href="#">Side Control</a>
+              </li>
+               <li>
+                <a href="#">Mount</a>
+              </li>
+              <li>
+                <a href="#">Back Control</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:;" data-toggle="collapse" data-target="#bottom"><i class="fa fa-fw fa-arrows-v"></i> Bottom Position <i class="fa fa-fw fa-caret-down"></i></a>
+            <ul id="bottom" class="collapse">
+              <li>
+                <a href="#">Full Guard</a>
+              </li>
+               <li>
+                <a href="#">Half Guard</a>
+              </li>
+               <li>
+                <a href="#">Side Control</a>
+              </li>
+               <li>
+                <a href="#">Mount</a>
+              </li>
+              <li>
+                <a href="#">Back Control</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:;" data-toggle="collapse" data-target="#other"><i class="fa fa-fw fa-arrows-v"></i> Other <i class="fa fa-fw fa-caret-down"></i></a>
+            <ul id="other" class="collapse">
+              <li>
+                <a href="#">Standing</a>
+              </li>
+            </ul>
           </li>
         </ul>
-        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav side-nav">    
-            <li>
-              <a href="javascript:;" data-toggle="collapse" data-target="#top"><i class="fa fa-fw fa-arrows-v"></i> Top Position <i class="fa fa-fw fa-caret-down"></i></a>
-            <ul id="top" class="collapse">
-                <li>
-                  <a href="#">Full Guard</a>
-                </li>
-                 <li>
-                  <a href="#">Half Guard</a>
-                </li>
-                 <li>
-                  <a href="#">Side Control</a>
-                </li>
-                 <li>
-                  <a href="#">Mount</a>
-                </li>
-                <li>
-                  <a href="#">Back Control</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:;" data-toggle="collapse" data-target="#bottom"><i class="fa fa-fw fa-arrows-v"></i> Bottom Position <i class="fa fa-fw fa-caret-down"></i></a>
-              <ul id="bottom" class="collapse">
-                <li>
-                  <a href="#">Full Guard</a>
-                </li>
-                 <li>
-                  <a href="#">Half Guard</a>
-                </li>
-                 <li>
-                  <a href="#">Side Control</a>
-                </li>
-                 <li>
-                  <a href="#">Mount</a>
-                </li>
-                <li>
-                  <a href="#">Back Control</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:;" data-toggle="collapse" data-target="#other"><i class="fa fa-fw fa-arrows-v"></i> Other <i class="fa fa-fw fa-caret-down"></i></a>
-              <ul id="other" class="collapse">
-                <li>
-                  <a href="#">Standing</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-    </nav>
-
-    <div id="page-wrapper">
-      <div class="container-fluid">
-        
-
-  <section id="techniques" class="col-lg-5">
-       <!--sub list-->
-        <div class="col-lg-12" id="sub-panel">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Submissions</h3>
-            </div>
-            <div class="panel-body" id="sub-list">
-              <div class="list-group">
-              </div>
-            </div>
-            <div class="container">
-              <div class="item row">
-                <div class="input-group col-xs-3 add-button">
-                  <input type="text" class="form-control" id="new-sub" placeholder="Add new technique" aria-describedby="basic-addon1">
-                  <span class="input-group-btn">
-                  <button class="btn btn-default" type="button" id="new-sub-btn">Add</button>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-    
-       <!--Sweeps list-->
-        <div class="col-lg-12" id="sweep-panel">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Sweeps</h3>
-            </div>
-            <div class="panel-body" id="sweep-list">
-              <div class="list-group">
-              </div>
-            </div>
-            <div class="container">
-              <div class="item row">
-                <div class="input-group col-xs-3 add-button">
-                  <input type="text" class="form-control" id="new-sweep" placeholder="Add new technique" aria-describedby="basic-addon1">
-                  <span class="input-group-btn">
-                  <button class="btn btn-default" type="button" id="new-sweep-btn">Add</button>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-       <!--Passes list-->
-       
-        <div class="col-lg-12" id="passes-panel">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Passes</h3>
-            </div>
-            <div class="panel-body" id="passes-list">
-              <div class="list-group">
-              </div>
-            </div>
-            <div class="container">
-              <div class="item row">
-                <div class="input-group col-xs-3 add-button">
-                  <input type="text" class="form-control" id="new-passes" placeholder="Add new technique" aria-describedby="basic-addon1">
-                  <span class="input-group-btn">
-                  <button class="btn btn-default" type="button" id="new-passes-btn">Add</button>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-       <!--Escapes list-->
-        <div class="col-lg-12" id="escapes-panel">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Escapes</h3>
-            </div>
-            <div class="panel-body" id="escapes-list">
-              <div class="list-group">
-              </div>
-            </div>
-            <div class="container">
-              <div class="item row">
-                <div class="input-group col-xs-3 add-button">
-                  <input type="text" class="form-control" id="new-escapes" placeholder="Add new technique" aria-describedby="basic-addon1">
-                  <span class="input-group-btn">
-                  <button class="btn btn-default" type="button" id="new-escapes-btn">Add</button>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>  
-        </div>      
-      </section>
-
-        <!--details-->
-      <section id="details" class="col-lg-7">
-        <div class="col-lg-12" id="details-panel">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Details</h3>
-            </div>
-            <div class="panel-body">
-              <div id="detail-head">
-                <h2>Name</h2>
-             </div>
-             <div class="form-group">
-              <label>Description:</label>
-              <textarea class="form-control" rows="2" id="description"></textarea>
-            </div>
-            <div id="video" class="container selector col-xs-12 text-center">
-              <div id="tech-vid" class="input-group col-xs-12">
-                <span class="input-group-addon" id="basic-addon1">Video</span>
-                <input type="text" class="form-control" placeholder="Type in the URL of the video" aria-describedby="basic-addon1">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Enter</button>
-                </span>
-              </div>
-            </div>
-            <div class="form-group notes">
-              <label>Notes:</label>
-              <textarea class="form-control" rows="7" id="notes"></textarea>
-            </div>
-
-          </div>
-        </div>
-      </div> 
-    </section>   
-
-
-
-
-          <!-- /.row -->
       </div>
-        <!-- /.container-fluid -->
-
+    </nav>
+  <div id="page-wrapper">
+    <div class="container-fluid">
+      <section id="techniques" class="col-lg-5">
+         <!--sub list-->
+          <div class="col-lg-12" id="sub-panel">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Submissions</h3>
+              </div>
+              <div class="panel-body" id="sub-list">
+                <div class="list-group">
+                </div>
+              </div>
+              <div class="container">
+                <div class="item row">
+                  <div class="input-group col-xs-3 add-button">
+                    <input type="text" class="form-control" id="new-sub" placeholder="Add new technique" aria-describedby="basic-addon1">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="new-sub-btn">Add</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         <!--Sweeps list-->
+          <div class="col-lg-12" id="sweep-panel">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Sweeps</h3>
+              </div>
+              <div class="panel-body" id="sweep-list">
+                <div class="list-group">
+                </div>
+              </div>
+              <div class="container">
+                <div class="item row">
+                  <div class="input-group col-xs-3 add-button">
+                    <input type="text" class="form-control" id="new-sweep" placeholder="Add new technique" aria-describedby="basic-addon1">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="new-sweep-btn">Add</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         <!--Passes list-->      
+          <div class="col-lg-12" id="passes-panel">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Passes</h3>
+              </div>
+              <div class="panel-body" id="passes-list">
+                <div class="list-group">
+                </div>
+              </div>
+              <div class="container">
+                <div class="item row">
+                  <div class="input-group col-xs-3 add-button">
+                    <input type="text" class="form-control" id="new-passes" placeholder="Add new technique" aria-describedby="basic-addon1">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="new-passes-btn">Add</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         <!--Escapes list-->
+          <div class="col-lg-12" id="escapes-panel">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Escapes</h3>
+              </div>
+              <div class="panel-body" id="escapes-list">
+                <div class="list-group">
+                </div>
+              </div>
+              <div class="container">
+                <div class="item row">
+                  <div class="input-group col-xs-3 add-button">
+                    <input type="text" class="form-control" id="new-escapes" placeholder="Add new technique" aria-describedby="basic-addon1">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="new-escapes-btn">Add</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </div>      
+        </section>
+          <!--details-->
+        <section id="details" class="col-lg-7">
+          <div class="col-lg-12" id="details-panel">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Details</h3>
+              </div>
+              <div class="panel-body">
+                <div id="detail-head">
+                  <h2>Name</h2>
+               </div>
+               <div class="form-group">
+                  <label>Description:</label>
+                  <textarea class="form-control" rows="2" id="description"></textarea>
+                </div>
+                <div id="video" class="container selector col-xs-12 text-center">
+                  <div id="tech-vid" class="input-group col-xs-12">
+                    <span class="input-group-addon" id="basic-addon1">Video</span>
+                    <input type="text" class="form-control" placeholder="Type in the URL of the video" aria-describedby="basic-addon1">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Enter</button>
+                    </span>
+                  </div>
+                </div>
+                <div class="form-group notes">
+                  <label>Notes:</label>
+                  <textarea class="form-control" rows="7" id="notes"></textarea>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </section>
     </div>
-    <!-- /#page-wrapper -->
-
+      <!-- /.container-fluid -->
   </div>
-  <!-- /#wrapper -->
+  <!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->
 
 </body>
 </html>

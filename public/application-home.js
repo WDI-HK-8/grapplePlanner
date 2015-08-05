@@ -77,13 +77,7 @@ $(document).ready(function(){
     console.log(split[1])
 
     html = '<iframe width="420" height="345" id="previousVideo" src="http://www.youtube.com/embed/'+ split[1] +'" frameborder="0" allowfullscreen></iframe>'
-
-
-
-
     $('#video').append(html);
   })
-
-
 
 });
